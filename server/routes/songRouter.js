@@ -1,11 +1,11 @@
-const pool = require('../modules/pool');
+const pool = require('../modules/pool.js');
 const express = require('express');
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
     //create variable to hold sql query
-    let queryText = 'SELECT * FROM "artist";';
+    let queryText = 'SELECT * FROM "song";';
 
     pool.query(queryText)
     .then(result => {
@@ -16,3 +16,5 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     });
 });
+
+module.exports = router;

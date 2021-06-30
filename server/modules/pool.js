@@ -1,7 +1,7 @@
 const pg= require('pg');
 const Pool = pg.Pool;
 const config = {
-    databas: 'jazzy-sql',
+    database: 'jazzy-sql',
     host: 'localhost',
     port: 5432,
     max: 10,
@@ -12,7 +12,7 @@ const pool = new Pool(config);
 
 //for debugging we check connections
 pool.on('connect', (client) => {
-    console.log('PostgeSQL connected');
+    console.log('PostgreSQL connected');
 });
 
 //log errors

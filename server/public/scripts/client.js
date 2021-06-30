@@ -11,7 +11,7 @@ function onReady() {
     });
 
     // load data from the server, put it on the DOM
-    getArtists();
+    getArtists()
     getSongs();    
 }
 
@@ -95,7 +95,7 @@ function renderArtists( listOfArtists ) {
     for(let artist of listOfArtists) {
         $('#artistTableBody').append(`
                 <tr>
-                    <td>${artist.name}</td>
+                    <td>${artist.artist}</td>
                     <td>${artist.birthdate}</td>
                 </tr>`
         );
